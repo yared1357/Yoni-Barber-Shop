@@ -149,8 +149,6 @@
                         <li><a href="#about" class="hover:text-blue-500">About Us</a></li>
                         <li><a href="#services" class="hover:text-blue-500">Services</a></li>
                         <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-                        <li><a href="#portfolio" class="hover:text-blue-500">Portfolio</a></li>
-                        <li><a href="#blogs" class="hover:text-blue-500">Blog</a></li>
                     </ul>
                 </div>
 
@@ -158,28 +156,29 @@
                 <div>
                     <h2 class="text-xl font-bold mb-4">Our Services</h2>
                     <ul class="space-y-2">
-                        <li>Website Designing</li>
-                        <li>Graphics Designing</li>
-                        <li>Video Editing</li>
-                        <li>Logo Designing</li>
+                        <li>Hair Styling</li>
+                        <li>Beard Grooming</li>
+                        <li>Coloring & Highlights</li>
+                        <li>Hair Treatments</li>
                     </ul>
                 </div>
             </div>
 
             <!-- From Developer -->
             <div class="mt-8 text-center">
-                <h3 class="text-lg font-bold mb-4">From Developer</h3>
-                <p class="mb-2">
-                    I am always ready to work with you and to satisfy your needs. We are very dedicated to our customers' orders and work hard to create everything as our customers need.
+                <h3 class="text-lg font-bold mb-4">From Yoni Hair Style</h3>
+                <p class="mb-2 text-lg">
+                    At Yoni Hair Style, we specialize in creating the best hairstyle and beard grooming tailored to your style. Our skilled team is dedicated to delivering exceptional results.
                 </p>
-                <p>
-                    Working with us always makes you happier and very satisfied, making your organization and profession very competitive internationally.
+                <p class="mb-2 text-lg">
+                    Enjoy a relaxing experience in our welcoming salon, where we enhance your look and boost your confidence.
                 </p>
             </div>
 
+
             <div class="mt-8 text-center">
                 <h3 class="text-lg font-bold mb-4">Follow Us</h3>
-                <div class="flex justify-center space-x-6 text-gray-400 hover:text-blue-500">
+                <div class="flex justify-center space-x-6 text-gray-400 hover:text-white">
                     <a href="#" aria-label="Facebook">
                         <i class="fab fa-facebook-f w-6 h-6"></i>
                     </a>
@@ -246,12 +245,13 @@
             });
         });
     </script>
+<script>
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    // Set the copyright text with a clickable link
+    const developerUrl = "http://yared.infinityfreeapp.com/";
+    document.getElementById('copyright').innerHTML = `Copyright © ${currentYear} | Designed by <a href="${developerUrl}" target="_blank" class="hover:text-white">Y-global System Solution</a>. All Rights Reserved`;
+</script>
 
-    <script>
-        // Get the current year
-        const currentYear = new Date().getFullYear();
-        // Set the copyright text
-        document.getElementById('copyright').textContent = `Copyright © ${currentYear} | Designed by Yared Akabachewu. All Rights Reserved`;
-    </script>
 </body>
 </html>
