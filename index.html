@@ -7,17 +7,39 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Manually enable dark mode for CDN */
-        .dark {
-            --tw-bg-opacity: 1;
-            background-color: rgba(31, 41, 55, var(--tw-bg-opacity)); /* bg-gray-800 */
-            --tw-text-opacity: 1;
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+      
+
+
+
+
+/* For bg-gray-700 */
+.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
+
+
+
+
+        /* Fixed header styling */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10; /* Ensure header is above other content */
         }
 
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Add padding to body to prevent content from hiding behind the fixed header */
+        body {
+            padding-top: 80px; /* Adjust based on header height */
         }
     </style>
 </head>
@@ -170,19 +192,11 @@
                 </div>
             </div>
 
-
-
-<!-- Copyright -->
-<div class="mt-8 text-center text-gray-400">
-    <p id="copyright"></p>
-</div>
-       
-</div>
-
-
-
-
-    
+            <!-- Copyright -->
+            <div class="mt-8 text-center text-gray-400">
+                <p id="copyright"></p>
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -233,11 +247,11 @@
         });
     </script>
 
-<script>
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-    // Set the copyright text
-    document.getElementById('copyright').textContent = `Copyright © ${currentYear} | Designed by Yared Akabachewu. All Rights Reserved`;
-</script>
+    <script>
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Set the copyright text
+        document.getElementById('copyright').textContent = `Copyright © ${currentYear} | Designed by Yared Akabachewu. All Rights Reserved`;
+    </script>
 </body>
 </html>
