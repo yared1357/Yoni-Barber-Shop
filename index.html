@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white transition-all duration-300">
+<html lang="en" class="bg-gray-100 text-gray-900 transition-all duration-300">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,50 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-      
+        /* Dark mode styles for body, header, and footer */
+        .dark {
+            --tw-bg-opacity: 1;
+            background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
+            --tw-text-opacity: 1;
+            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+        }
 
+        /* Dark mode styles for header */
+        .dark header {
+            background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+        }
 
+        /* Dark mode styles for header text */
+        .dark header h1,
+        .dark header a,
+        .dark header .text-gray-900 {
+            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+        }
 
+        /* Dark mode styles for footer */
+        .dark footer {
+            background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+        }
 
-/* For bg-gray-700 */
-.dark {
-    --tw-bg-opacity: 1;
-    background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
-    --tw-text-opacity: 1;
-    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-}
+        /* Dark mode styles for footer text */
+        .dark footer,
+        .dark footer h2,
+        .dark footer p,
+        .dark footer a,
+        .dark footer li,
+        .dark footer .text-gray-500 {
+            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+        }
 
-
-
+        /* Light mode styles for footer text */
+        footer,
+        footer h2,
+        footer p,
+        footer a,
+        footer li,
+        footer .text-gray-500 {
+            color: rgba(107, 114, 128, var(--tw-text-opacity)); /* text-gray-500 */
+        }
 
         /* Fixed header styling */
         header {
@@ -30,6 +59,7 @@
             left: 0;
             right: 0;
             z-index: 10; /* Ensure header is above other content */
+            background-color: white; /* Default light mode background */
         }
 
         /* Smooth scrolling */
@@ -41,27 +71,73 @@
         body {
             padding-top: 80px; /* Adjust based on header height */
         }
+
+       /* Slideshow styling */
+.slideshow {
+    height: 600px; /* Default height */
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    height: 100%; /* Fill the height of the container */
+    width: 100%; /* Fill the width of the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.active {
+    display: flex; /* Show the active slide */
+    opacity: 1; /* Full visibility */
+}
+
+.slide:not(.active) {
+    opacity: 0; /* Fade out non-active slides */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; /* Fill the entire slide area */
+    object-fit: cover; /* Cover the entire container, cropping if necessary */
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .slideshow {
+        height: 400px; /* Height for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .slideshow {
+        height: 300px; /* Height for mobile devices */
+    }
+}
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="bg-white dark:bg-gray-900 shadow-md">
+    <header>
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo and Name -->
             <div class="flex items-center">
                 <img src="download.png" alt="Yoni Style Logo" class="w-12 h-12 rounded-full">
-                <h1 class="text-2xl font-bold ml-3 text-gray-900 dark:text-white hover:text-blue-500">Yoni Style</h1>
+                <h1 class="text-2xl font-bold ml-3 text-gray-900 hover:text-blue-500">Yoni Style</h1>
             </div>
 
             <!-- Navigation Menu and Dark Mode Toggle -->
             <div class="flex items-center space-x-6">
                 <nav id="nav-menu" class="hidden md:flex space-x-6">
-                    <a href="#home" class="text-gray-900 dark:text-white hover:text-blue-500 transition duration-300">Home</a>
-                    <a href="#about" class="text-gray-900 dark:text-white hover:text-blue-500 transition duration-300">About</a>
-                    <a href="#services" class="text-gray-900 dark:text-white hover:text-blue-500 transition duration-300">Services</a>
-                    <a href="#blogs" class="text-gray-900 dark:text-white hover:text-blue-500 transition duration-300">Blogs</a>
-                    <a href="#style" class="text-gray-900 dark:text-white hover:text-blue-500 transition duration-300">Styles</a>
-                    <a href="#contact" class="text-gray-900 dark:text-white hover:text-blue-500 transition duration-300">Contact</a>
+                    <a href="#home" class="text-gray-900 hover:text-blue-500 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-900 hover:text-blue-500 transition duration-300">About</a>
+                    <a href="#services" class="text-gray-900 hover:text-blue-500 transition duration-300">Services</a>
+                    <a href="#blogs" class="text-gray-900 hover:text-blue-500 transition duration-300">Blogs</a>
+                    <a href="#style" class="text-gray-900 hover:text-blue-500 transition duration-300">Styles</a>
+                    <a href="#contact" class="text-gray-900 hover:text-blue-500 transition duration-300">Contact</a>
                 </nav>
 
                 <button id="theme-toggle" class="p-2 rounded-full bg-blue-500 text-white hover:bg-blue-700 transition duration-300">
@@ -83,20 +159,47 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-            <a href="#home" class="block text-gray-900 dark:text-white hover:text-blue-500 transition duration-300 py-2">Home</a>
-            <a href="#about" class="block text-gray-900 dark:text-white hover:text-blue-500 transition duration-300 py-2">About</a>
-            <a href="#services" class="block text-gray-900 dark:text-white hover:text-blue-500 transition duration-300 py-2">Services</a>
-            <a href="#blogs" class="block text-gray-900 dark:text-white hover:text-blue-500 transition duration-300 py-2">Blogs</a>
-            <a href="#style" class="block text-gray-900 dark:text-white hover:text-blue-500 transition duration-300 py-2">Styles</a>
-            <a href="#contact" class="block text-gray-900 dark:text-white hover:text-blue-500 transition duration-300 py-2">Contact</a>
+            <a href="#home" class="block text-gray-900 hover:text-blue-500 transition duration-300 py-2">Home</a>
+            <a href="#about" class="block text-gray-900 hover:text-blue-500 transition duration-300 py-2">About</a>
+            <a href="#services" class="block text-gray-900 hover:text-blue-500 transition duration-300 py-2">Services</a>
+            <a href="#blogs" class="block text-gray-900 hover:text-blue-500 transition duration-300 py-2">Blogs</a>
+            <a href="#style" class="block text-gray-900 hover:text-blue-500 transition duration-300 py-2">Styles</a>
+            <a href="#contact" class="block text-gray-900 hover:text-blue-500 transition duration-300 py-2">Contact</a>
         </div>
     </header>
 
     <!-- Main Content Sections -->
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-1">
         <section id="home" class="mb-8">
-            <h1 class="text-2xl font-bold">Welcome to Yoni Style</h1>
-            <p class="mt-2">Your go-to barber shop for the best haircuts and grooming services.</p>
+            <!-- Slideshow -->
+            <div class="relative w-full mx-auto mt- overflow-hidden slideshow">
+                <!-- Slideshow Images -->
+                <div class="slide active">
+                    <img src="s1.jpg" class="w-full h-full" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="s2.jpg" class="w-full h-full" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="s3.jpg" class="w-full h-full" alt="Slide 3">
+                </div>
+
+                <div class="slide">
+                    <img src="s4.jpg" class="w-full h-full" alt="Slide 3">
+                </div>
+
+                <div class="slide">
+                    <img src="s5.jpg" class="w-full h-full" alt="Slide 3">
+                </div>
+
+                <div class="slide">
+                    <img src="s6.jpg" class="w-full h-full" alt="Slide 3">
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button onclick="changeSlide(-1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded">❮</button>
+                <button onclick="changeSlide(1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded">❯</button>
+            </div>
         </section>
 
         <section id="about" class="mb-8">
@@ -125,80 +228,75 @@
         </section>
     </div>
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-6 md:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-            <!-- Contact Information -->
-            <div>
-                <h2 class="text-xl font-bold mb-4">Yoni Hair Style</h2>
-                <p>Ethiopia, Addis Ababa</p>
-                <p>Address, Bole Rwanda</p>
-                <p>
-                    Phone: <a href="tel:+251926862255" class="hover:text-blue-500">+251 926-862-255</a>
-                </p>
-                <p>
-                    Email: <a href="mailto:yared1357@gmail.com" class="hover:text-blue-500">yared1357@gmail.com</a>
-                </p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Yoni Hair Style</h2>
+                    <p>Ethiopia, Addis Ababa</p>
+                    <p>Address, Bole Rwanda</p>
+                    <p>
+                        Phone: <a href="tel:+251926862255" class="hover:text-blue-500">+251 926-862-255</a>
+                    </p>
+                    <p>
+                        Email: <a href="mailto:yared1357@gmail.com" class="hover:text-blue-500">yared1357@gmail.com</a>
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white">Home</a></li>
+                        <li><a href="#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Our Services</h2>
+                    <ul class="space-y-2">
+                        <li>Hair Styling</li>
+                        <li>Beard Grooming</li>
+                        <li>Coloring & Highlights</li>
+                        <li>Hair Treatments</li>
+                    </ul>
+                </div>
+
+                <!-- From Developer -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">From Yoni Hair Style</h3>
+                    <p class="mb-2 text-lg">
+                        At Yoni Hair Style, we specialize in creating the best hairstyle and beard grooming tailored to your style. Our skilled team is dedicated to delivering exceptional results.
+                    </p>
+                </div>
             </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h2 class="text-xl font-bold mb-4">Quick Links</h2>
-                <ul class="space-y-2">
-                    <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-                    <li><a href="#about" class="hover:text-blue-500">About Us</a></li>
-                    <li><a href="#services" class="hover:text-blue-500">Services</a></li>
-                    <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-                </ul>
+            <div class="mt-8 text-center">
+                <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                <div class="flex justify-center space-x-6 text-gray-400 hover:text-white">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f w-6 h-6 hover:text-white"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter w-6 h-6 hover:text-white"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram w-6 h-6 hover:text-white"></i>
+                    </a>
+                </div>
             </div>
 
-            <!-- Our Services -->
-            <div>
-                <h2 class="text-xl font-bold mb-4">Our Services</h2>
-                <ul class="space-y-2">
-                    <li>Hair Styling</li>
-                    <li>Beard Grooming</li>
-                    <li>Coloring & Highlights</li>
-                    <li>Hair Treatments</li>
-                </ul>
-            </div>
-
-            <!-- From Developer -->
-            <div>
-                <h3 class="text-lg font-bold mb-4">From Yoni Hair Style</h3>
-                <p class="mb-2 text-lg">
-                    At Yoni Hair Style, we specialize in creating the best hairstyle and beard grooming tailored to your style. Our skilled team is dedicated to delivering exceptional results.
-                </p>
+            <!-- Copyright -->
+            <div class="mt-8 text-center text-gray-400">
+                <p id="copyright"></p>
             </div>
         </div>
-
-        <div class="mt-8 text-center">
-            <h3 class="text-lg font-bold mb-4">Follow Us</h3>
-            <div class="flex justify-center space-x-6 text-gray-400 hover:text-white">
-                <a href="#" aria-label="Facebook">
-                    <i class="fab fa-facebook-f w-6 h-6"></i>
-                </a>
-                <a href="#" aria-label="Twitter">
-                    <i class="fab fa-twitter w-6 h-6"></i>
-                </a>
-                <a href="#" aria-label="Instagram">
-                    <i class="fab fa-instagram w-6 h-6"></i>
-                </a>
-            </div>
-        </div>
-
-
-        
-
-
-
-        <!-- Copyright -->
-        <div class="mt-8 text-center text-gray-400">
-            <p id="copyright"></p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // JavaScript to toggle dark mode
@@ -246,14 +344,36 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-    </script>
-<script>
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-    // Set the copyright text with a clickable link
-    const developerUrl = "http://yared.infinityfreeapp.com/";
-    document.getElementById('copyright').innerHTML = `Copyright © ${currentYear} | Designed by <a href="${developerUrl}" target="_blank" class="hover:text-white">Y-global System Solution</a>. All Rights Reserved`;
-</script>
 
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Set the initial slide
+        showSlide(currentSlide);
+
+        // Auto slide every 5 seconds
+        setInterval(() => changeSlide(1), 5000);
+
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        // Set the copyright text with a clickable link
+        const developerUrl = "http://yared.infinityfreeapp.com/";
+        document.getElementById('copyright').innerHTML = `Copyright © ${currentYear} | Designed by <a href="${developerUrl}" target="_blank" class="hover:text-white">Y-global System Solution</a>. All Rights Reserved`;
+    </script>
 </body>
 </html>
