@@ -8,50 +8,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Dark mode styles for body, header, and footer */
-        .dark {
-            --tw-bg-opacity: 1;
-            background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
-            --tw-text-opacity: 1;
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-        }
+.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Dark mode styles for header */
-        .dark header {
-            background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
-        }
+/* Dark mode styles for body text */
+.dark body {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Dark mode styles for header text */
-        .dark header h1,
-        .dark header a,
-        .dark header .text-gray-900 {
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-        }
+/* Dark mode styles for all text elements in the body */
+.dark body p,
+.dark body h1,
+.dark body h2,
+.dark body h3,
+.dark body h4,
+.dark body h5,
+.dark body h6,
+.dark body span,
+.dark body a,
+.dark body li {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Dark mode styles for footer */
-        .dark footer {
-            background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
-        }
+/* Dark mode styles for header */
+.dark header {
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+}
 
-        /* Dark mode styles for footer text */
-        .dark footer,
-        .dark footer h2,
-        .dark footer p,
-        .dark footer a,
-        .dark footer li,
-        .dark footer .text-gray-500 {
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-        }
+/* Dark mode styles for header text */
+.dark header h1,
+.dark header a,
+.dark header .text-gray-900 {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Light mode styles for footer text */
-        footer,
-        footer h2,
-        footer p,
-        footer a,
-        footer li,
-        footer .text-gray-500 {
-            color: rgba(107, 114, 128, var(--tw-text-opacity)); /* text-gray-500 */
-        }
+/* Dark mode styles for footer */
+.dark footer {
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+}
 
+/* Dark mode styles for footer text */
+.dark footer,
+.dark footer h2,
+.dark footer p,
+.dark footer a,
+.dark footer li,
+.dark footer .text-gray-500 {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
+
+/* Light mode styles for footer text */
+footer,
+footer h2,
+footer p,
+footer a,
+footer li,
+footer .text-gray-500 {
+    color: rgba(107, 114, 128, var(--tw-text-opacity)); /* text-gray-500 */
+}
         /* Fixed header styling */
         header {
             position: fixed;
@@ -71,53 +89,26 @@
         body {
             padding-top: 80px; /* Adjust based on header height */
         }
-
-       /* Slideshow styling */
-.slideshow {
-    height: 600px; /* Default height */
-    width: 100%;
-    position: relative;
-    overflow: hidden; /* Ensure no overflow */
-}
-
-.slide {
-    display: none; /* Hide all slides by default */
-    height: 100%; /* Fill the height of the container */
-    width: 100%; /* Fill the width of the container */
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease-in-out; /* Smooth transition */
-}
-
-.active {
-    display: flex; /* Show the active slide */
-    opacity: 1; /* Full visibility */
-}
-
-.slide:not(.active) {
-    opacity: 0; /* Fade out non-active slides */
-}
-
-.slide img {
-    width: 100%;
-    height: 100%; /* Fill the entire slide area */
-    object-fit: cover; /* Cover the entire container, cropping if necessary */
-}
-
-/* Responsive design */
-@media (max-width: 992px) {
-    .slideshow {
-        height: 400px; /* Height for tablets */
-    }
-}
-
-@media (max-width: 576px) {
-    .slideshow {
-        height: 300px; /* Height for mobile devices */
-    }
-}
     </style>
+
+<style>
+    @media (max-width: 640px) {
+        .responsive-img {
+            height: 200px; /* Small screens */
+        }
+    }
+    @media (min-width: 640px) and (max-width: 1024px) {
+        .responsive-img {
+            height: 300px; /* Medium screens */
+        }
+    }
+    @media (min-width: 1024px) {
+        .responsive-img {
+            height: 360px; /* Large screens */
+        }
+    }
+</style>
+
 </head>
 <body>
     <!-- Header -->
@@ -168,7 +159,109 @@
         </div>
     </header>
 
-    
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 mt-1 mb-1">
+        <div class="flex justify-center items-center">
+            <img src="s3.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Stylish Men's Haircut">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s2.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s1.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s5.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s4.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s6.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+    </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mt-1 mb-1">
+        <div class="flex flex-col justify-center items-center text-center">
+            <h1 class="text-3xl font-bold text-gray-800 mt-4">About Yoni Men's Style</h1>
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                Founded in 2018 by Yonas Fikre, Yoni Style is dedicated to celebrating the art of men's grooming. Our mission is to provide a welcoming space where you can discover hairstyles and beard styles that resonate with your personal style. Whether you prefer a timeless classic or a contemporary twist, our diverse range of options caters to every taste and lifestyle.   
+            </p>
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                We believe that your hairstyle is a reflection of who you are. Our skilled stylists take the time to understand your unique features and preferences, ensuring you leave with a look that enhances your individuality. From precision cuts to expertly shaped beards, we are dedicated to helping you express yourself with confidence.   
+            </p>
+
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                At Yoni Style, we offer more than just grooming services. We provide expert advice and high-quality products to help you maintain your look long after you leave our chair. Our goal is to empower you to embrace your style and transform your grooming routine into an enjoyable experience. Let us help you elevate your hair and beard game—because when you look good, you feel good!    
+            </p>
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s3.jpg" class="w-full h-[300px] object-cover" alt="Stylish Men's Haircut">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s2.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s4.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
+        </div>
+    </div>
+
+
+
+   
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mt-1 mb-1">
+       
+        <div class="flex flex-col justify-center items-center text-center">
+            <h1 class="text-3xl font-bold text-gray-800 mt-4">Yoni Style's Mission</h1>
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                At Yoni Style, our mission is to empower men to express their individuality through exceptional grooming. We strive to create a welcoming environment where every client feels valued and understood.   
+            </p>
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                Our dedicated team, led by founder Yonas Fikre since 2018, 
+                is committed to providing personalized hairstyling and beard grooming services that enhance your unique features. 
+                We believe that grooming is not just about looking good it's about feeling confident and authentic.</p>
+                <p class="text-xl text-black text-center mb-4 mx-4">
+                    By combining our expertise with high-quality products and tailored advice, we aim to transform your grooming experience into an enjoyable journey. Our goal is to help you embrace your style and elevate your self-expression, one haircut at a time.
+                </p>
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s2.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s4.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
+        </div>
+
+        <div class="flex flex-col justify-center items-center text-center">
+            <h1 class="text-3xl font-bold text-gray-800 mt-4">Yoni Style's Vision</h1>
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                At Yoni Style, our vision is to be a leader in men's grooming, renowned for our commitment to quality, creativity, and personalized service. We aspire to create a community where men feel empowered to explore their unique style and express their individuality through their hair and beard.    
+            </p>
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                We envision a space where grooming transcends the ordinary, becoming an art form that enhances confidence and self-expression. By continually innovating our techniques and staying ahead of trends, we aim to inspire our clients to embrace their true selves.     
+            </p>
+
+            <p class="text-xl text-black text-center mb-4 mx-4">
+                Our goal is to redefine men's grooming, making it an essential part of every man's lifestyle a journey of transformation, confidence, and authenticity.   
+            </p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-1 mt-1 mb-1">
+        <div class="flex justify-center items-center">
+            <img src="s3.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Stylish Men's Haircut">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s2.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s1.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s5.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
+        </div>
+        
+    </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 py-8 text-white">
