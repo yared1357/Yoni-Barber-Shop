@@ -8,50 +8,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Dark mode styles for body, header, and footer */
-        .dark {
-            --tw-bg-opacity: 1;
-            background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
-            --tw-text-opacity: 1;
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-        }
+.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* bg-gray-700 */
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Dark mode styles for header */
-        .dark header {
-            background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
-        }
+/* Dark mode styles for body text */
+.dark body {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Dark mode styles for header text */
-        .dark header h1,
-        .dark header a,
-        .dark header .text-gray-900 {
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-        }
+/* Dark mode styles for all text elements in the body */
+.dark body p,
+.dark body h1,
+.dark body h2,
+.dark body h3,
+.dark body h4,
+.dark body h5,
+.dark body h6,
+.dark body span,
+.dark body a,
+.dark body li {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Dark mode styles for footer */
-        .dark footer {
-            background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
-        }
+/* Dark mode styles for header */
+.dark header {
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+}
 
-        /* Dark mode styles for footer text */
-        .dark footer,
-        .dark footer h2,
-        .dark footer p,
-        .dark footer a,
-        .dark footer li,
-        .dark footer .text-gray-500 {
-            color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
-        }
+/* Dark mode styles for header text */
+.dark header h1,
+.dark header a,
+.dark header .text-gray-900 {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
 
-        /* Light mode styles for footer text */
-        footer,
-        footer h2,
-        footer p,
-        footer a,
-        footer li,
-        footer .text-gray-500 {
-            color: rgba(107, 114, 128, var(--tw-text-opacity)); /* text-gray-500 */
-        }
+/* Dark mode styles for footer */
+.dark footer {
+    background-color: rgba(17, 24, 39, var(--tw-bg-opacity)); /* bg-gray-900 */
+}
 
+/* Dark mode styles for footer text */
+.dark footer,
+.dark footer h2,
+.dark footer p,
+.dark footer a,
+.dark footer li,
+.dark footer .text-gray-500 {
+    color: rgba(255, 255, 255, var(--tw-text-opacity)); /* text-white */
+}
+
+/* Light mode styles for footer text */
+footer,
+footer h2,
+footer p,
+footer a,
+footer li,
+footer .text-gray-500 {
+    color: rgba(107, 114, 128, var(--tw-text-opacity)); /* text-gray-500 */
+}
         /* Fixed header styling */
         header {
             position: fixed;
@@ -225,7 +243,7 @@
 
 
     
-    <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-2 mt-1 mb-1">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1 mt-1 mb-1">
         <div class="flex justify-center items-center">
             <img src="s3.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Stylish Men's Haircut">
         </div>
@@ -233,16 +251,22 @@
             <img src="s2.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s1.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s5.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
             <img src="s4.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s3.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s2.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+        </div>
+        <div class="flex justify-center items-center">
+            <img src="s1.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
         </div>
     </div>
 
