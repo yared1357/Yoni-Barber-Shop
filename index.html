@@ -117,12 +117,6 @@ footer .text-gray-500 {
     opacity: 0; /* Fade out non-active slides */
 }
 
-.slide img {
-    width: 100%;
-    height: 100%; /* Fill the entire slide area */
-    object-fit: cover; /* Cover the entire container, cropping if necessary */
-}
-
 /* Responsive design */
 @media (max-width: 992px) {
     .slideshow {
@@ -136,6 +130,24 @@ footer .text-gray-500 {
     }
 }
     </style>
+
+<style>
+    @media (max-width: 640px) {
+        .responsive-img {
+            height: 200px; /* Small screens */
+        }
+    }
+    @media (min-width: 640px) and (max-width: 1024px) {
+        .responsive-img {
+            height: 300px; /* Medium screens */
+        }
+    }
+    @media (min-width: 1024px) {
+        .responsive-img {
+            height: 360px; /* Large screens */
+        }
+    }
+</style>
 </head>
 <body>
     <!-- Header -->
@@ -187,41 +199,37 @@ footer .text-gray-500 {
     </header>
 
     <div class="container mx-auto">
-            <!-- Slideshow -->
-            <div class="relative w-full mx-auto mt- overflow-hidden slideshow">
-                <!-- Slideshow Images -->
-                <div class="slide active">
-                    <img src="s1.jpg" class="w-full h-full" alt="Slide 1">
-                </div>
-                <div class="slide">
-                    <img src="s2.jpg" class="w-full h-full" alt="Slide 2">
-                </div>
-                <div class="slide">
-                    <img src="s3.jpg" class="w-full h-full" alt="Slide 3">
-                </div>
-
-                <div class="slide">
-                    <img src="s4.jpg" class="w-full h-full" alt="Slide 3">
-                </div>
-
-                <div class="slide">
-                    <img src="s5.jpg" class="w-full h-full" alt="Slide 3">
-                </div>
-
-                <div class="slide">
-                    <img src="s6.jpg" class="w-full h-full" alt="Slide 3">
-                </div>
-                
-                <!-- Navigation Buttons -->
-                <button onclick="changeSlide(-1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded">❮</button>
-                <button onclick="changeSlide(1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded">❯</button>
+        <!-- Slideshow -->
+        <div class="relative w-full mx-auto mt-1 overflow-hidden slideshow">
+            <!-- Slideshow Images -->
+            <div class="slide active">
+                <img src="s1.jpg" class="w-full h-full object-cover" alt="Slide 1">
             </div>
-    </div>
+            <div class="slide">
+                <img src="s2.jpg" class="w-full h-full object-cover" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="s3.jpg" class="w-full h-full object-cover" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="s4.jpg" class="w-full h-full object-cover" alt="Slide 4">
+            </div>
+            <div class="slide">
+                <img src="s5.jpg" class="w-full h-full object-cover" alt="Slide 5">
+            </div>
+            <div class="slide">
+                <img src="s6.jpg" class="w-full h-full object-cover" alt="Slide 6">
+            </div>
     
+            <!-- Navigation Buttons -->
+            <button onclick="changeSlide(-1)" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded">❮</button>
+            <button onclick="changeSlide(1)" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded">❯</button>
+        </div>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mt-1 mb-1">
         <div class="flex flex-col justify-center items-center text-center">
-            <h1 class="text-3xl font-bold text-gray-800 mt-4">This is Yoni Style.</h1>
+            <h1 class="text-3xl font-bold text-gray-800 mt-4">Yoni Men's Hair and Bread Style</h1>
             <p class="text-xl text-black text-center mb-4 mx-4">
                 Discover the latest trends in men's hairstyles with Yoni Style. Whether you're looking for a classic cut or a modern look, our styles cater to all tastes. From the timeless fade to the edgy undercut, each hairstyle is designed to enhance your features and express your individuality. Embrace your style with confidence and let your hair do the talking, because a great hairstyle is the foundation of any stylish look.
             </p>
@@ -242,37 +250,26 @@ footer .text-gray-500 {
 
 
 
-    
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1 mt-1 mb-1">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 mt-1 mb-1">
         <div class="flex justify-center items-center">
-            <img src="s3.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Stylish Men's Haircut">
+            <img src="s3.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Stylish Men's Haircut">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s2.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s2.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s1.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s1.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s5.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s5.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s4.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
         </div>
         <div class="flex justify-center items-center">
-            <img src="s3.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s2.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s1.jpg" class="w-full h-[200px] md:h-[300px] lg:h-[400px] object-cover" alt="Modern Men's Hairstyle">
+            <img src="s6.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
         </div>
     </div>
-
-
-    
-
     <!-- Footer -->
     <footer class="bg-gray-800 py-8 text-white">
         <div class="container mx-auto px-6 md:px-12">
