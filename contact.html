@@ -6,6 +6,7 @@
     <title>Yoni Style - Barber Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Dark mode styles for body, header, and footer */
 .dark {
@@ -91,24 +92,6 @@ footer .text-gray-500 {
         }
     </style>
 
-<style>
-    @media (max-width: 640px) {
-        .responsive-img {
-            height: 200px; /* Small screens */
-        }
-    }
-    @media (min-width: 640px) and (max-width: 1024px) {
-        .responsive-img {
-            height: 300px; /* Medium screens */
-        }
-    }
-    @media (min-width: 1024px) {
-        .responsive-img {
-            height: 360px; /* Large screens */
-        }
-    }
-</style>
-
 </head>
 <body>
     <!-- Header -->
@@ -116,7 +99,7 @@ footer .text-gray-500 {
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo and Name -->
             <div class="flex items-center">
-                <img src="logo.png" alt="Yoni Style Logo" style="width:50px; height:50px; border-radius: 30%;">
+                <img src="logo.png" alt="Yoni Style Logo" class="w-12 h-12 rounded-full">
                 <h1 class="text-2xl font-bold ml-3 text-gray-900 hover:text-blue-500">Yoni Style</h1>
             </div>
 
@@ -132,16 +115,16 @@ footer .text-gray-500 {
                 </nav>
 
                 <button id="theme-toggle" class="p-2 rounded-full bg-blue-500 text-white hover:bg-blue-700 transition duration-300">
-                    <svg id="sun-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="sun-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
-                    <svg id="moon-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="moon-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
 
                 <button id="menu-toggle" class="md:hidden p-2 rounded-full bg-blue-500 text-white hover:bg-blue-700 transition duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
@@ -159,256 +142,215 @@ footer .text-gray-500 {
         </div>
     </header>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 mt-1 mb-1">
-        <div class="flex justify-center items-center">
-            <img src="s3.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Stylish Men's Haircut">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s2.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s1.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s5.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s6.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-    </div>
-
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mt-1 mb-1">
-        <div class="flex flex-col justify-center items-center text-center">
-            <h1 class="text-3xl font-bold text-gray-800 mt-4">About Yoni Men's Style</h1>
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                Founded in 2018 by Yonas Fikre, Yoni Style is dedicated to celebrating the art of men's grooming. Our mission is to provide a welcoming space where you can discover hairstyles and beard styles that resonate with your personal style. Whether you prefer a timeless classic or a contemporary twist, our diverse range of options caters to every taste and lifestyle.   
-            </p>
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                We believe that your hairstyle is a reflection of who you are. Our skilled stylists take the time to understand your unique features and preferences, ensuring you leave with a look that enhances your individuality. From precision cuts to expertly shaped beards, we are dedicated to helping you express yourself with confidence.   
-            </p>
-
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                At Yoni Style, we offer more than just grooming services. We provide expert advice and high-quality products to help you maintain your look long after you leave our chair. Our goal is to empower you to embrace your style and transform your grooming routine into an enjoyable experience. Let us help you elevate your hair and beard game—because when you look good, you feel good!    
-            </p>
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s3.jpg" class="w-full h-[300px] object-cover" alt="Stylish Men's Haircut">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s2.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
-        </div>
-    </div>
-
-
-
-   
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 mt-1 mb-1">
-       
-        <div class="flex flex-col justify-center items-center text-center">
-            <h1 class="text-3xl font-bold text-gray-800 mt-4">Yoni Style's Mission</h1>
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                At Yoni Style, our mission is to empower men to express their individuality through exceptional grooming. We strive to create a welcoming environment where every client feels valued and understood.   
-            </p>
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                Our dedicated team, led by founder Yonas Fikre since 2018, 
-                is committed to providing personalized hairstyling and beard grooming services that enhance your unique features. 
-                We believe that grooming is not just about looking good it's about feeling confident and authentic.</p>
-                <p class="text-xl text-black text-center mb-4 mx-4">
-                    By combining our expertise with high-quality products and tailored advice, we aim to transform your grooming experience into an enjoyable journey. Our goal is to help you embrace your style and elevate your self-expression, one haircut at a time.
-                </p>
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s2.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s4.jpg" class="w-full h-[300px] object-cover" alt="Modern Men's Hairstyle">
+    <div class="container mx-auto px-4">
+        <div class="frame">
+            <iframe 
+                title="Contact Form"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31524.66191018823!2d38.704367274316404!3d9.01048630000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85da18e1b723%3A0x42d08092ca9eea40!2sMexico%20Square!5e0!3m2!1sen!2set!4v1734155171306!5m2!1sen!2set" 
+                class="w-full h-96 border-0 pt-2" 
+                allowfullscreen 
+                loading="lazy">
+            </iframe>
         </div>
 
-        <div class="flex flex-col justify-center items-center text-center">
-            <h1 class="text-3xl font-bold text-gray-800 mt-4">Yoni Style's Vision</h1>
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                At Yoni Style, our vision is to be a leader in men's grooming, renowned for our commitment to quality, creativity, and personalized service. We aspire to create a community where men feel empowered to explore their unique style and express their individuality through their hair and beard.    
-            </p>
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                We envision a space where grooming transcends the ordinary, becoming an art form that enhances confidence and self-expression. By continually innovating our techniques and staying ahead of trends, we aim to inspire our clients to embrace their true selves.     
-            </p>
-
-            <p class="text-xl text-black text-center mb-4 mx-4">
-                Our goal is to redefine men's grooming, making it an essential part of every man's lifestyle a journey of transformation, confidence, and authenticity.   
-            </p>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-1 mt-1 mb-1">
-        <div class="flex justify-center items-center">
-            <img src="s3.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Stylish Men's Haircut">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s2.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s1.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
-        <div class="flex justify-center items-center">
-            <img src="s5.jpg" class="responsive-img" style="width: 100%; object-fit: cover;" alt="Modern Men's Hairstyle">
-        </div>
         
-    </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-8 text-white">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-                <!-- Contact Information -->
-                <div class="text-white">
-                    <h2 class="text-xl font-bold text-white mb-4">Yoni Hair Style</h2>
-                    <p class="text-white">Ethiopia, Addis Ababa</p>
-                    <p class="text-white">Address, Bole Rwanda</p>
-                    <p class="text-white">
-                        Phone: <a href="tel:+251926862255" class="text-white hover:text-blue-500">+251 926-862-255</a>
-                    </p>
-                    <p class="text-white">
-                        Email: <a href="mailto:yared1357@gmail.com" class="text-white hover:text-blue-500">yared1357@gmail.com</a>
-                    </p>
+        <div class="container mx-auto px-4 mt-8 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="contact-content rounded-lg shadow-lg p-6">
+                    <h2 style="font-size: 2.5rem; font-weight:400; margin-bottom: 30px;">Need help?</h2>
+                    
+                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.5rem;">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; font-size: 2rem;"></i>
+                        <span style="font-weight: 500;">Address:</span> Addis Ababa, Ethiopia
+                    </h3>
+                    
+                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.5rem;">
+                        <i class="fas fa-phone" style="margin-right: 0.5rem; font-size: 2rem;"></i>
+                        <span style="font-weight: 500;">Phone:</span> 
+                        <a href="tel:+251926862255">+251 926862255</a>
+                    </h3>
+                    
+                    <h3 style="display: flex; align-items: center;  font-size: 1.5rem;">
+                        <i class="fas fa-envelope" style="margin-right: 0.5rem; font-size: 2rem;"></i>
+                        <span style="font-weight: 500;">Email:</span> 
+                        <a href="mailto:yared123@gmail.com">yared123@gmail.com</a>
+                    </h3>
                 </div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h2 class="text-white text-xl font-bold mb-4 ">Quick Links</h2>
-                    <ul class="space-y-2">
-                        <li><a href="home.html" class="text-white hover:text-white">Home</a></li>
-                        <li><a href="about.html" class="text-white hover:text-white">About Us</a></li>
-                        <li><a href="services.html" class="text-white hover:text-white">Services</a></li>
-                        <li><a href="contact.html" class="text-white hover:text-white">Contact</a></li>
-                    </ul>
+                
+                <div class="contact-container  rounded-lg shadow-xl p-6">
+                    <h2 class="text-3xl font-bold mb-4">Contact Me!</h2>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium">Name:</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium">Email:</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-medium">Phone:</label>
+                            <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium">Message:</label>
+                            <textarea id="message" name="message" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
+                        </div>
+                        <button type="submit" class="w-[120px] mt-4 bg-blue-500 text-white rounded-md p-2 hover:bg-blue-700 transition duration-300">Submit</button>
+                    </form>
                 </div>
-
-                <!-- Our Services -->
-                <div>
-                    <h2 class="text-white text-xl font-bold mb-4">Our Services</h2>
-                    <ul class="space-y-2">
-                        <li class="text-white">Hair Styling</li>
-                        <li class="text-white">Beard Grooming</li>
-                        <li class="text-white">Coloring & Highlights</li>
-                        <li class="text-white">Hair Treatments</li>
-                    </ul>
-                </div>
-
-                <!-- From Developer -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4">From Yoni Hair Style</h3>
-                    <p class="mb-2 text-lg text-white">
-                        At Yoni Hair Style, we specialize in creating the best hairstyle and beard grooming tailored to your style. Our skilled team is dedicated to delivering exceptional results.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-8 text-center text-white border-t border-dashed">
-                <h3 class="text-lg font-bold mb-4">Follow Us</h3>
-                <div class="flex justify-center space-x-6 text-gray-400 hover:text-white">
-                    <a href="#" aria-label="Facebook">
-                        <i class="fab fa-facebook-f w-6 h-6 text-white"></i>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <i class="fab fa-twitter w-6 h-6 text-white"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <i class="fab fa-instagram w-6 h-6 text-white"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="mt-8 text-center text-gray-400">
-                <p id="copyright"></p>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script>
-        // JavaScript to toggle dark mode
-        const toggleButton = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
+   <!-- Footer -->
+   <footer class="bg-gray-800 py-8 text-white">
+    <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <!-- Contact Information -->
+            <div class="text-white">
+                <h2 class="text-xl font-bold text-white mb-4">Yoni Hair Style</h2>
+                <p class="text-white">Ethiopia, Addis Ababa</p>
+                <p class="text-white">Address, Bole Rwanda</p>
+                <p class="text-white">
+                    Phone: <a href="tel:+251926862255" class="text-white hover:text-blue-500">+251 926-862-255</a>
+                </p>
+                <p class="text-white">
+                    Email: <a href="mailto:yared1357@gmail.com" class="text-white hover:text-blue-500">yared1357@gmail.com</a>
+                </p>
+            </div>
 
-        function loadTheme() {
-            if (localStorage.getItem('dark-mode') === 'enabled') {
-                document.documentElement.classList.add('dark');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            } else {
-                document.documentElement.classList.remove('dark');
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
+            <!-- Quick Links -->
+            <div>
+                <h2 class="text-white text-xl font-bold mb-4 ">Quick Links</h2>
+                <ul class="space-y-2">
+                    <li><a href="home.html" class="text-white hover:text-white">Home</a></li>
+                    <li><a href="about.html" class="text-white hover:text-white">About Us</a></li>
+                    <li><a href="services.html" class="text-white hover:text-white">Services</a></li>
+                    <li><a href="contact.html" class="text-white hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div>
+                <h2 class="text-white text-xl font-bold mb-4">Our Services</h2>
+                <ul class="space-y-2">
+                    <li class="text-white">Hair Styling</li>
+                    <li class="text-white">Beard Grooming</li>
+                    <li class="text-white">Coloring & Highlights</li>
+                    <li class="text-white">Hair Treatments</li>
+                </ul>
+            </div>
+
+            <!-- From Developer -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">From Yoni Hair Style</h3>
+                <p class="mb-2 text-lg text-white">
+                    At Yoni Hair Style, we specialize in creating the best hairstyle and beard grooming tailored to your style. Our skilled team is dedicated to delivering exceptional results.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-white border-t border-dashed">
+            <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+            <div class="flex justify-center space-x-6 text-gray-400 hover:text-white">
+                <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f w-6 h-6 text-white"></i>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fab fa-twitter w-6 h-6 text-white"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram w-6 h-6 text-white"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 text-center text-gray-400">
+            <p id="copyright"></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // JavaScript to toggle dark mode
+    const toggleButton = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+
+    function loadTheme() {
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        }
+    }
+
+    toggleButton.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        if (document.documentElement.classList.contains('dark')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        }
+    });
+
+    window.onload = loadTheme;
+
+    // JavaScript to toggle mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // Slideshow functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
             }
-        }
-
-        toggleButton.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.setItem('dark-mode', 'enabled');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            }
         });
+    }
 
-        window.onload = loadTheme;
-
-        // JavaScript to toggle mobile menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Slideshow functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        function changeSlide(direction) {
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // Set the initial slide
+    function changeSlide(direction) {
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
         showSlide(currentSlide);
+    }
 
-        // Auto slide every 5 seconds
-        setInterval(() => changeSlide(1), 5000);
+    // Set the initial slide
+    showSlide(currentSlide);
 
-        // Get the current year
-        const currentYear = new Date().getFullYear();
-        // Set the copyright text with a clickable link
-        const developerUrl = "http://yared.infinityfreeapp.com/";
-        document.getElementById('copyright').innerHTML = `Copyright © ${currentYear} | Designed by <a href="${developerUrl}" target="_blank" class="hover:text-white">Y-global System Solution</a>. All Rights Reserved`;
-    </script>
+    // Auto slide every 5 seconds
+    setInterval(() => changeSlide(1), 5000);
+
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    // Set the copyright text with a clickable link
+    const developerUrl = "http://yared.infinityfreeapp.com/";
+    document.getElementById('copyright').innerHTML = `Copyright © ${currentYear} | Designed by <a href="${developerUrl}" target="_blank" class="hover:text-white">Y-global System Solution</a>. All Rights Reserved`;
+</script>
 </body>
 </html>
