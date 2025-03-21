@@ -92,19 +92,7 @@ footer .text-gray-500 {
         }
     </style>
 
-<style>
-    @media (max-width: 768px) {
-        .contact-content h2 {
-            font-size: 0.7rem; /* Adjusted for medium devices */
-        }
-        .contact-item {
-            font-size: 0.7rem; /* Adjusted font size for smaller devices */
-        }
-        .contact-item i {
-            font-size: 0.7rem; /* Adjusted icon size for smaller devices */
-        }
-    }
-</style>
+
 
 </head>
 <body>
@@ -167,58 +155,65 @@ footer .text-gray-500 {
             </iframe>
         </div>
 
-        
-
-        <div class="container mx-auto px-4 mt-8 mb-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="contact-content rounded-lg shadow-lg p-6">
-                    <h2 style="font-size: 2.5rem; font-weight:400; margin-bottom: 30px;">Need help?</h2>
-                    
-                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.5rem;">
-                        <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; font-size: 2rem;"></i>
-                        <span style="font-weight: 500;">Address:</span> Addis Ababa, Ethiopia
-                    </h3>
-                    
-                    <h3 style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.5rem;">
-                        <i class="fas fa-phone" style="margin-right: 0.5rem; font-size: 2rem;"></i>
-                        <span style="font-weight: 500;">Phone:</span> 
-                        <a href="tel:+251926862255">+251 926862255</a>
-                    </h3>
-                    
-                    <h3 style="display: flex; align-items: center;  font-size: 1.5rem;">
-                        <i class="fas fa-envelope" style="margin-right: 0.5rem; font-size: 2rem;"></i>
-                        <span style="font-weight: 500;">Email:</span> 
-                        <a href="mailto:yared123@gmail.com">yared123@gmail.com</a>
-                    </h3>
-                </div>
-
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="contact-content rounded-lg shadow-lg p-6">
+                <h2 style="font-size: 2.5rem; font-weight: 400; margin-bottom: 30px;" class="contact-title">Need help?</h2>
                 
-                <div class="contact-container  rounded-lg shadow-xl p-6">
-                    <h2 class="text-3xl font-bold mb-4">Contact Me!</h2>
-                    <form action="#" method="POST">
-                        <div class="mb-4">
-                            <label for="name" class="block text-sm font-medium">Name:</label>
-                            <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium">Email:</label>
-                            <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="phone" class="block text-sm font-medium">Phone:</label>
-                            <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-sm font-medium">Message:</label>
-                            <textarea id="message" name="message" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
-                        </div>
-                        <button type="submit" class="w-[120px] mt-4 bg-blue-500 text-white rounded-md p-2 hover:bg-blue-700 transition duration-300">Submit</button>
-                    </form>
-                </div>
+                <p style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.5rem;" class="contact-item">
+                    <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; font-size: 2rem;" class="contact-icon"></i>
+                    Address: Addis Ababa, Ethiopia
+                </p>
+                
+                <p style="display: flex; align-items: center; margin-bottom: 20px; font-size: 1.5rem;" class="contact-item">
+                    <i class="fas fa-phone" style="margin-right: 0.5rem; font-size: 2rem;" class="contact-icon"></i>
+                    Phone: 
+                    <a href="tel:+251926862255">+251 926862255</a>
+                </p>
+                
+                <p style="display: flex; align-items: center; font-size: 1.5rem;" class="contact-item">
+                    <i class="fas fa-envelope" style="margin-right: 0.5rem; font-size: 2rem;" class="contact-icon"></i>
+                    Email: 
+                    <a href="mailto:yared123@gmail.com">yared123@gmail.com</a>
+                </p>
+            </div>
+        
+            <div class="contact-container rounded-lg shadow-xl p-6">
+                <h2 class="text-3xl font-bold mb-4">Contact Me!</h2>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium">Name:</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium">Email:</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-medium">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium">Message:</label>
+                        <textarea id="message" name="message" required class="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
+                    </div>
+                    <button type="submit" class="w-[120px] mt-4 bg-blue-500 text-white rounded-md p-2 hover:bg-blue-700 transition duration-300">Submit</button>
+                </form>
             </div>
         </div>
-    </div>
-
+        
+        <style>
+            @media (max-width: 768px) {
+                .contact-title {
+                    font-size: 1rem; /* Smaller font size for h2 */
+                }
+                .contact-item {
+                    font-size: 1rem; /* Smaller font size for p */
+                }
+                .contact-icon {
+                    font-size: 1rem; /* Smaller icon size */
+                }
+            }
+        </style>
    <!-- Footer -->
    <footer class="bg-gray-800 py-8 text-white">
     <div class="container mx-auto px-6 md:px-12">
